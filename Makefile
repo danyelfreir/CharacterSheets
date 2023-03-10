@@ -17,4 +17,4 @@ $(OFILES) : obj/%.o : $(SRCFILES)%.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm $(OFILES) $(TARGET)
+	rm $(OFILES) $(CATEGORIES) $(ROLES) $(TARGET)
