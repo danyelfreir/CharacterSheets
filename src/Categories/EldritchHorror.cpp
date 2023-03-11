@@ -1,4 +1,4 @@
-#include "../inc/EldritchHorror.h"
+#include "../../inc/EldritchHorror.h"
 
 EldritchHorror::EldritchHorror(int life, int strength, int intelligence, bool natural,
                                int disquiet, int traumatism)

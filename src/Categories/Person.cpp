@@ -1,4 +1,4 @@
-#include "../inc/Person.h"
+#include "../../inc/Person.h"
 
 Person::Person(int life, int strength, int intelligence, std::string gender, int fear)
     : Being(life, strength, intelligence) {

@@ -2,11 +2,11 @@
 #include <vector>
 
 #include "../inc/Role.h"
-#include "../inc/RoleCreator.h"
+#include "../inc/RoleSpeciesHandler.h"
 #include "../inc/Species.h"
 
 int main(int argc, char *argv[]) {
-    RoleCreator rc;
+    RoleSpeciesHandler rc;
     std::vector<Role> roles;
     std::vector<Species> species;
 

@@ -1,4 +1,4 @@
-#include "../inc/Creature.h"
+#include "../../inc/Creature.h"
 
 Creature::Creature(int life, int strength, int intelligence, bool natural, int disquiet)
     : Being(life, strength, intelligence) {

@@ -1,4 +1,4 @@
-#include "../inc/Species.h"
+#include "../../inc/Species.h"
 
 Species::Species(std::string name, int life, int strenght, int intellegence, bool natural,
                  int disquiet, bool is_eldritch) {

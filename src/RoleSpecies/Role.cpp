@@ -1,4 +1,4 @@
-#include "../inc/Role.h"
+#include "../../inc/Role.h"
 
 Role::Role(std::string name, int min_hp, int max_hp, int min_str, int max_str, int min_int,
            int max_int, std::string gender, bool is_investigator) {

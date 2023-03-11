@@ -1,9 +1,9 @@
 CC := g++
-CATDIR := obj/categories
-ROLDIR := obj/roles
-# CATEGORIES := $(CATDIR)/Being.o $(CATDIR)/Person.o $(CATDIR)/Investigator.o $(CATDIR)Creature.o $(CATDIR)EldritchHorror.o
-# ROLES := $(ROLDIR)/
-OFILES := obj/Being.o obj/Person.o obj/Investigator.o obj/Creature.o obj/EldritchHorror.o obj/Role.o obj/Species.o obj/RoleSpeciesMap.o obj/RoleCreator.o obj/main.o
+CATDIR := obj/Categories
+ROLDIR := obj/RoleSpecies
+CATEGORIES := $(CATDIR)/Being.o $(CATDIR)/Person.o $(CATDIR)/Investigator.o $(CATDIR)/Creature.o $(CATDIR)/EldritchHorror.o
+ROLES := $(ROLDIR)/Role.o $(ROLDIR)/Species.o $(ROLDIR)/RoleSpeciesMap.o $(ROLDIR)/RoleSpeciesHandler.o
+OFILES := $(CATEGORIES) $(ROLES) obj/main.o
 SRCFILES := src/
 INCFILES := inc/
 FLAGS := -std=c++11 -I $(INCFILES)

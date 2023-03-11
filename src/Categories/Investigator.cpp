@@ -1,4 +1,4 @@
-#include "../inc/Investigator.h"
+#include "../../inc/Investigator.h"
 
 Investigator::Investigator(int life, int strength, int intelligence,
                            std::string gender, int fear, int terror)

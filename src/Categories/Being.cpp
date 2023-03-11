@@ -1,4 +1,4 @@
-#include "../inc/Being.h"
+#include "../../inc/Being.h"
 
 #include <cstdlib>
 #include <random>

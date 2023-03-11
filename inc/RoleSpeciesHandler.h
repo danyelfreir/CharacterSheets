@@ -6,13 +6,13 @@
 #include "../inc/Species.h"
 #include "RoleSpeciesMap.h"
 
-class RoleCreator {
+class RoleSpeciesHandler {
   private:
     RoleSpeciesMap<std::string> rsm;
     std::vector<std::string> get_filenames();
 
   public:
-    RoleCreator();
+    RoleSpeciesHandler();
     void read_from_file(std::vector<Role> &roles, std::vector<Species> &species);
     void write_species_to_file(Species &species);
     void write_role_to_file(Role &role);

@@ -1,9 +1,9 @@
-#include "../inc/RoleCreator.h"
+#include "../../inc/RoleSpeciesHandler.h"
 #include <cstdio>
 
-RoleCreator::RoleCreator() {}
+RoleSpeciesHandler::RoleSpeciesHandler() {}
 
-std::vector<std::string> RoleCreator::get_filenames() {
+std::vector<std::string> RoleSpeciesHandler::get_filenames() {
     std::ifstream fin("data/roles.txt");
     std::vector<std::string> filenames;
     std::string filename;
@@ -13,7 +13,8 @@ std::vector<std::string> RoleCreator::get_filenames() {
     return filenames;
 }
 
-void RoleCreator::read_from_file(std::vector<Role> &roles, std::vector<Species> &species) {
+void RoleSpeciesHandler::read_from_file(std::vector<Role> &roles,
+                                        std::vector<Species> &species) {
     std::ifstream fin;
     std::vector<std::string> filenames = this->get_filenames();
 
@@ -86,7 +87,7 @@ void RoleCreator::read_from_file(std::vector<Role> &roles, std::vector<Species> 
     }
 }
 
-void RoleCreator::write_role_to_file(Role &role) {
+void RoleSpeciesHandler::write_role_to_file(Role &role) {
     std::string filename = "data/Roles/";
     filename.append(role.get_name());
     filename.append(".txt");
@@ -102,7 +103,7 @@ void RoleCreator::write_role_to_file(Role &role) {
     fout << role.get_gender();
 }
 
-void RoleCreator::write_species_to_file(Species &species) {
+void RoleSpeciesHandler::write_species_to_file(Species &species) {
     std::string filename = "data/Roles/";
     filename.append(species.get_name());
     filename.append(".txt");
@@ -123,8 +124,8 @@ void RoleCreator::write_species_to_file(Species &species) {
     }
 }
 
-void RoleCreator::create_species(std::vector<Species> &species, std::string name,
-                                 Creature *creature) {
+void RoleSpeciesHandler::create_species(std::vector<Species> &species, std::string name,
+                                        Creature *creature) {
     rsm.add(name);
     name.append(std::to_string(this->rsm.peek(name)));
     Species sp(name, creature);
@@ -132,7 +133,8 @@ void RoleCreator::create_species(std::vector<Species> &species, std::string name
     this->write_species_to_file(sp);
 }
 
-void RoleCreator::create_role(std::vector<Role> &roles, std::string name, Person *person) {
+void RoleSpeciesHandler::create_role(std::vector<Role> &roles, std::string name,
+                                     Person *person) {
     rsm.add(name);
     name.append(std::to_string(this->rsm.peek(name)));
     Role r(name, person);
@@ -140,8 +142,8 @@ void RoleCreator::create_role(std::vector<Role> &roles, std::string name, Person
     this->write_role_to_file(r);
 }
 
-void RoleCreator::delete_species_or_role(std::vector<Species> &species,
-                                         std::vector<Role> &roles, int being_id) {
+void RoleSpeciesHandler::delete_species_or_role(std::vector<Species> &species,
+                                                std::vector<Role> &roles, int being_id) {
     for (int i = 0; i < species.size(); i++) {
         if (species[i].get_id() == being_id) {
             Species tmp = species[i];
@@ -160,7 +162,7 @@ void RoleCreator::delete_species_or_role(std::vector<Species> &species,
     }
 }
 
-void RoleCreator::delete_file(std::string name) {
+void RoleSpeciesHandler::delete_file(std::string name) {
     std::string filename = "data/Roles/";
     filename.append(name);
     filename.append(".txt");
