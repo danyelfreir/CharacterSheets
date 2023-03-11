@@ -1,0 +1,9 @@
+Person
+Nurse
+5
+7
+3
+7
+7
+9
+Male

@@ -1,0 +1,7 @@
+data/Roles/Nurse1.txt
+data/Roles/Reporter1.txt
+data/Roles/Professor1.txt
+data/Roles/Ghoul1.txt
+data/Roles/Wolf1.txt
+data/Roles/Chthonian1.txt
+data/Roles/Shoggoth1.txt

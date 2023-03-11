@@ -1,0 +1,9 @@
+Person
+Reporter
+5
+7
+2
+6
+6
+8
+Female

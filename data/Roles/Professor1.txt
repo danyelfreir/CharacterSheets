@@ -1,0 +1,9 @@
+Person
+Professor
+4
+6
+1
+5
+8
+10
+Female

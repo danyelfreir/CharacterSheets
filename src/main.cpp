@@ -1,23 +1,21 @@
 #include <iostream>
 #include <vector>
 
-#include "../inc/Being.h"
-#include "../inc/Investigator.h"
-#include "../inc/Person.h"
+#include "../inc/Role.h"
+#include "../inc/RoleCreator.h"
+#include "../inc/Species.h"
 
 int main(int argc, char *argv[]) {
-  std::vector<Being *> beings;
-  beings.push_back(new Person("Male"));
-  beings.push_back(new Being());
-  beings.push_back(new Person("Female"));
-  beings.push_back(new Person("Male"));
-  beings.push_back(new Being());
-  beings.push_back(new Being());
-  beings.push_back(new Person("Female"));
-  beings.push_back(new Investigator("Male"));
+    RoleCreator rc;
+    std::vector<Role> roles;
+    std::vector<Species> species;
+    rc.read_from_file(roles, species);
+    // RoleSpeciesMap<Role> rsm;
+    // rsm.add(Role("Nurse", 5, 7, 2, 6, 7, 9, "Male", false));
+    // rsm.add(Role("Reporter", 5, 7, 2, 6, 6, 8, "Female", true));
+    // rsm.add(Role("Professor", 4, 6, 1, 5, 8, 10, "Male", true));
+    // rsm.add(Role("Nurse", 5, 7, 2, 6, 7, 9, "Female", false));
+    // rsm.print();
 
-  for (Being *b : beings)
-    b->print();
-
-  return 0;
+    return 0;
 }
