@@ -59,7 +59,8 @@ void Being::set_intelligence(int intelligence) {
 void Being::set_category(std::string category) { this->_category = category; }
 
 void Being::print() {
-    std::cout << this->get_category() << " " << this->get_id() << "\n"
+    std::cout << "\tID -> " << this->get_id() << "\n"
+              << "\tCategory -> " << this->get_category() << "\n"
               << "\tLife -> " << this->get_life() << "\n"
               << "\tStrength -> " << this->get_strength() << "\n"
               << "\tIntelligence -> " << this->get_intelligence() << "\n";

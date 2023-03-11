@@ -11,13 +11,13 @@ class Being {
     int _intelligence;
 
   protected:
-    int get_id();
-    std::string get_category();
     void set_id();
     void set_category(std::string category);
 
   public:
     Being(int life, int strength, int intelligence);
+    std::string get_category();
+    int get_id();
     int get_life();
     int get_strength();
     int get_intelligence();

@@ -5,3 +5,5 @@ data/Roles/Ghoul1.txt
 data/Roles/Wolf1.txt
 data/Roles/Chthonian1.txt
 data/Roles/Shoggoth1.txt
+data/Roles/Quidditch.txt
+data/Roles/Nurse2.txt
